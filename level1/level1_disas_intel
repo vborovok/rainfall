@@ -1,0 +1,12 @@
+   0x08048480 <+0>:	push   ebp - prologue
+   0x08048481 <+1>:	mov    ebp,esp - prologue
+   0x08048483 <+3>:	and    esp,0xfffffff0 - compiler stuff
+   0x08048486 <+6>:	sub    esp,0x50 - creating 80 bytes space (compiler align stack size to 16)
+   0x08048489 <+9>:	lea    eax,[esp+0x10] - load effective address from ESP + 16 to EAX
+   0x0804848d <+13>:	mov    DWORD PTR [esp],eax - copy address from EAX on top of the stack
+   0x08048490 <+16>:	call   0x8048340 <gets@plt> - ?
+   0x08048495 <+21>:	leave
+   0x08048496 <+22>:	ret
+
+   AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADCBD
+   AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA

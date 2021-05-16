@@ -1,0 +1,4 @@
+./level0 file has owner level1 and we see 's' in file permissions, 's' enables other users to inherit the effective GID of file group owner,
+so we can use that to run shell script from file owner, the program starts the /bin/sh (row 145) command by the level1 only if passed argument is equal to 423 (row 30),
+  so we just need to run ./level0 423, next the command `whoami` output is level1, so we can do next command:
+`cat /home/user/level1/.pass` and catch the flag

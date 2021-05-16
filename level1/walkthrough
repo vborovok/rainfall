@@ -1,0 +1,4 @@
+/level1 file has owner level2 and we see 's' in file permissions, 's' enables other users to inherit the effective GID of file group owner,
+so we can use that to run shell script from file owner. From disassembly we see a static memory allocation, guess it is for string for gets() call, after several tries
+i found out that the program exits with error, because input string length is more that the program was allocated, and this long string overwrites the program stack.
+We can use a classic buffer overflow attack which allows to run "/bin/bash" command with file owner permissions.
